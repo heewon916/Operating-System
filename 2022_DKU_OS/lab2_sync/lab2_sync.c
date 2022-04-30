@@ -242,14 +242,15 @@ void hash_queue_add(hlist_node *hashtable, int val) {
 		new_H_node->q_loc = rear;
 	} else{
 		hlist_node* tmp;
-		tmp = hashtable[key];
+		tmp = &hashtable[key];
 		while(tmp){
 			tmp = tmp->next;
-		}
-		tmp->next = rear;
-		new_H_node->q_loc = tmp->
+		} // get out when the node is the last one
+		tmp->next = new_H_node;
+		new_H_node->q_loc = rear;
 	}
-	free(new_node);
+	free(new_Q_node);
+	free(new_H_node);
 }
 /*
  * TODO
