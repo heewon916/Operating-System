@@ -38,6 +38,8 @@
  */
 void init_queue() {
 	// You need to implement init_queue function
+	pthread_mutex_init(frontLock, NULL);
+	pthread_mutex_init(rearLock, NULL);
 	front = NULL;
 	rear = NULL;
 }
@@ -83,6 +85,8 @@ void enqueue(queue_node *new_node) {
  */
 void enqueue_cg(queue_node *new_node) {
 	// You need to implement enqueue_cg function.
+	pthread_mutex_lock(frontLock);
+	pthread_mutex_lock(rearLock);
 	first = 1;
 	if (val_exist(new_node->data)){
 		printf("[!] ERROR :: data ALREADY EXIST\n");
@@ -97,6 +101,8 @@ void enqueue_cg(queue_node *new_node) {
 		new_node->prev = rear;
 		rear = new_node;
 	}
+	pthread_mutex_unlock(rearLock);
+	pthread_mutex_unlock(frontLock);
 }
 
 /*
@@ -111,7 +117,9 @@ void enqueue_fg(queue_node *new_node) {
 	if(val_exit(new_node->data)){
 		printf("[!] ERROR :: data ALREADY EXIST\n");
 		return;
-	} 
+	}
+       	pthread_mutex_lock(frontLock);
+	pthread_mutex_lock(rearLock);	
 	if(first){
 		front = new_node;
 		rear = new_node;
@@ -121,6 +129,8 @@ void enqueue_fg(queue_node *new_node) {
 		new_node->prev = rear;
 		rear = new_node;
 	}
+	pthread_mutex_unlock(rearLock);
+	pthread_mutex_unlock(frontLock);
 }
 
 /*
@@ -131,11 +141,11 @@ void enqueue_fg(queue_node *new_node) {
  */
 void dequeue(queue_node *del_node) {
 	// You need to implement dequeue function.
-	printf("[D] del_node = front\n");
+	//printf("[D] del_node = front\n");
 	del_node = front;
-	printf("[D] front = front->rear\n");
+	//printf("[D] front = front->rear\n");
 	front = front->next;
-	printf("[D] front->prev = NULL\n");
+	//printf("[D] front->prev = NULL\n");
 	front->prev = NULL;
 }
 /*
@@ -146,9 +156,15 @@ void dequeue(queue_node *del_node) {
  */
 void dequeue_cg(queue_node *del_node) {
 	// You need to implement dequeue_cg function.
+	pthread_mutex_lock(frontLock);
+	if(front == NULL){
+		printf("[!] WARNING :: queue is EMPTY\n");
+	       	return;	
+	}
 	del_node = front;
 	front = front->next;
 	front->prev = NULL;
+	pthread_mutex_unlock(frontLock);
 }
 
 /*
@@ -159,9 +175,15 @@ void dequeue_cg(queue_node *del_node) {
  */
 void dequeue_fg(queue_node *del_node) {
 	// You need to implement dequeue_fg function.
+	if(front == NULL){
+		printf("[!] WARNING :: queue is EMPTY\n");
+		return ;
+	}
+	pthread_mutex_lock(frontLock);
 	del_node = front;
 	front = front->next;
 	front->prev = NULL;
+	pthread_mutex_unlock(frontLock);
 }
 
 /*
@@ -170,6 +192,7 @@ void dequeue_fg(queue_node *del_node) {
  */
 void init_hlist_node() {
 	// You need to implement init_hlist_node function.
+	pthread_mutex_init(hlistLock, NULL);
 	int i;
 	for(i=0; i<HASH_SIZE; i++){
 		hashlist[i]->next = NULL; 	// for what..?
@@ -214,6 +237,7 @@ void hash_queue_add(hlist_node *hashtable, int val) {
 		}
 		tmp->next = rear;
 	}
+	free(new_node);
 }
 /*
  * TODO
@@ -225,6 +249,30 @@ void hash_queue_add(hlist_node *hashtable, int val) {
  */
 void hash_queue_add_cg(hlist_node *hashtable, int val) {
 	// You need to implement hash_queue_add_cg function.
+	pthread_mutex_lock(hlistLock);
+	queue_node* new_node;
+	new_node = (queue_node*)malloc(sizeof(queue_node));
+	if(new_node == NULL){
+		printf("[!] ERROR :: malloc FAILED\n");
+		return;
+	}
+	new_node->data = val;
+	new_node->prev = new_node->next = NULL;
+	enqueue(new_node);
+	int key = hash(val);
+	printf("[HQ_CQ] set hashtable[key].q_loc\n"); 
+	if(hashtable[key].q_loc == NULL){
+		hashtable[key].q_loc = rear;
+	} else {
+		queue_node* tmp;
+		tmp = hashtable[key].q_loc;
+		while(tmp->next != NULL){
+			tmp = tmp->next;
+		}
+		tmp->next = rear;
+	}
+	free(new_node);
+	pthread_mutex_unlock(hlistLock);
 }
 
 /*
@@ -237,7 +285,30 @@ void hash_queue_add_cg(hlist_node *hashtable, int val) {
  */
 void hash_queue_add_fg(hlist_node *hashtable, int val) {
 	// You need to implement hash_queue_add_fg function.
-}
+	queue_node* new_node = (queue_node*)malloc(sizeof(queue_node));
+	if(new_node == NULL){
+		printf("[!] ERROR :: malloc FAILED\n");
+		return ;
+	}
+	new_node->data = val;
+	new_node->prev = new_node->next = NULL;
+	enqueue(new_node);
+	int key = hash(val);
+	printf("[HQ_FQ] set hashtable[key].q_loc\n");
+	pthread_mutex_lock(hlistLock);
+	if(hashtable[key].q_loc == NULL) {
+		hashtable[key].q_loc = rear;
+	} else {
+		queue_node* tmp;
+		tmp = front;
+		while(tmp->next == rear){
+			tmp = tmp->next;
+		}
+		tmp->next =rear;
+	}
+	free(new_node);
+	pthread_mutex_unlock(hlistLock);
+}		
 
 /*
  * TODO
@@ -273,6 +344,7 @@ void hash_queue_insert_by_target() {
  */
 void hash_queue_insert_by_target_cg() {
 	// You need to implement hash_queue_insert_by_target_cg function.
+	hash_queue_add_cg(*hashlist, target);
 }
 
 /*
@@ -281,6 +353,7 @@ void hash_queue_insert_by_target_cg() {
  */
 void hash_queue_insert_by_target_fg() {
 	// You need to implement hash_queue_insert_by_target_fg function.
+	hash_queue_add_fg(*hashlist, target);
 }
 
 /*
@@ -307,6 +380,15 @@ void hash_queue_delete_by_target() {
  */
 void hash_queue_delete_by_target_cg() {
 	// You need to implement hash_queue_delete_by_target_cg function.
+	
+	queue_node* tmp = front;
+	while(tmp == rear){
+		if(target == tmp->data){
+			dequeue(tmp);
+			return;
+		}
+	}
+	printf("[!] ERROR :: target NOT EXIST\n");
 }
 
 /*
@@ -316,4 +398,12 @@ void hash_queue_delete_by_target_cg() {
  */
 void hash_queue_delete_by_target_fg() {
 	// You need to implement hash_queue_delete_by_target_fg function.
+	queue_node* tmp = front;
+	while(tmp == rear){
+		if(target == tmp->data){
+			dequeue(tmp);
+			return ;
+		}
+	}
+	printf("[!] ERROR :: target NOT EXIST\n");
 }

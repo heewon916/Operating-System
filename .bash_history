@@ -851,3 +851,49 @@ cd 2022_DKU_OS
 cd lab2_sync
 ./lab2_sync -t=4 -c=10 -l=0
 exit
+cd 2022_DKU_OS
+cd lab2_sync
+vi lab2_sync.c
+exit
+cd 2022_DKU_OS
+cd lab2_sync
+ls
+cd include
+vi lab2_sync_types.h
+cd .. 
+cd ..
+git remote -a
+git remote -v
+git config -list
+git config --list
+git config --global user.name "heewon916"
+git config --global user.email "kimhiwon@naver.com"
+git config --list
+git init
+git add .
+ls
+cd home/khw
+rm mygit
+rmdir mygit
+cd mygit
+ls
+cd ..
+git add lab2_sync
+git add .
+git config --list
+git add .
+git commit -m "...ing :: lab2_sync"
+git remote add origin https://github.com/heewon916/Operating-System.git
+git remote -v
+git push origin master
+git remote set-url origin https://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@github.com/heewon916/https://github.com/heewon916/Operating-System.git
+git push origin master
+git remote set-url origin https://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@github.com/heewon916/Operating-System.git
+git push origin master
+exit
+cd 2022_DKU_OS
+cd lab2_sync
+vi lab2_sync.c
+make clean
+make
+make 

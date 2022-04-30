@@ -11,16 +11,16 @@
 # hlsearch on (H) or off (h):
 ~h
 # Command Line History (newest to oldest):
-:q
-|2,0,1651283929,,"q"
 :wq
-|2,0,1651066296,,"wq"
+|2,0,1651291131,,"wq"
+:w
+|2,0,1651291127,,"w"
+:q
+|2,0,1651285458,,"q"
 :set number
 |2,0,1651043912,,"set number"
 :set
 |2,0,1651043904,,"set"
-:w
-|2,0,1651041726,,"w"
 :set numebr
 |2,0,1649254876,,"set numebr"
 :s
@@ -46,38 +46,68 @@
 |3,1,36,0,1,0,1649356055,"c"
 
 # File marks:
-'0  49  9  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h
-|4,48,49,9,1651283929,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h"
-'1  43  1  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h
-|4,49,43,1,1651066302,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h"
-'2  43  1  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h
-|4,50,43,1,1651066302,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h"
-'3  142  65  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,51,142,65,1651066296,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
-'4  1  0  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_test.c
-|4,52,1,0,1651065680,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_test.c"
-'5  286  8  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,53,286,8,1651065660,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
-'6  143  56  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,54,143,56,1651065609,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
-'7  143  56  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,55,143,56,1651065609,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
-'8  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,56,200,2,1651065403,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
-'9  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,57,200,2,1651065403,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+'0  383  0  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
+|4,48,383,0,1651291131,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
+'1  52  1  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
+|4,49,52,1,1651285458,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
+'2  50  1  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
+|4,50,50,1,1651285458,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
+'3  49  9  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h
+|4,51,49,9,1651283929,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h"
+'4  43  1  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h
+|4,52,43,1,1651066302,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h"
+'5  43  1  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h
+|4,53,43,1,1651066302,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h"
+'6  199  65  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
+|4,54,199,65,1651066296,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
+'7  152  65  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
+|4,55,152,65,1651066296,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
+'8  176  65  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
+|4,56,176,65,1651066296,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
+'9  142  65  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
+|4,57,142,65,1651066296,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
 
 # Jumplist (newest first):
+-'  383  0  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
+|4,39,383,0,1651291131,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
+-'  52  1  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
+|4,39,52,1,1651287633,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
+-'  50  1  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
+|4,39,50,1,1651285458,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
+-'  49  9  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h
+|4,39,49,9,1651283929,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h"
 -'  49  9  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h
 |4,39,49,9,1651283929,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h"
 -'  43  1  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h
 |4,39,43,1,1651283893,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h"
 -'  43  1  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h
+|4,39,43,1,1651283893,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h"
+-'  199  65  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
+|4,39,199,65,1651280044,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
+-'  176  65  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
+|4,39,176,65,1651280044,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
+-'  43  1  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h
 |4,39,43,1,1651066302,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h"
+-'  43  1  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h
+|4,39,43,1,1651066302,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h"
+-'  43  1  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h
+|4,39,43,1,1651066302,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h"
+-'  43  1  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h
+|4,39,43,1,1651066302,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h"
+-'  152  65  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
+|4,39,152,65,1651066296,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
 -'  142  65  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
 |4,39,142,65,1651066296,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
 -'  142  65  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
 |4,39,142,65,1651066296,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
+-'  71  0  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h
+|4,39,71,0,1651065684,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h"
+-'  71  0  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h
+|4,39,71,0,1651065684,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h"
+-'  71  0  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h
+|4,39,71,0,1651065684,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h"
+-'  71  0  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h
+|4,39,71,0,1651065684,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h"
 -'  71  0  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h
 |4,39,71,0,1651065684,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h"
 -'  71  0  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h
@@ -90,6 +120,22 @@
 |4,39,1,0,1651065680,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_test.c"
 -'  1  0  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_test.c
 |4,39,1,0,1651065680,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_test.c"
+-'  1  0  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_test.c
+|4,39,1,0,1651065680,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_test.c"
+-'  1  0  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_test.c
+|4,39,1,0,1651065680,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_test.c"
+-'  1  0  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_test.c
+|4,39,1,0,1651065680,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_test.c"
+-'  1  0  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_test.c
+|4,39,1,0,1651065680,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_test.c"
+-'  1  0  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_test.c
+|4,39,1,0,1651065680,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_test.c"
+-'  1  0  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_test.c
+|4,39,1,0,1651065680,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_test.c"
+-'  1  0  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_test.c
+|4,39,1,0,1651065680,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_test.c"
+-'  1  0  ~/2022_DKU_OS/lab2_sync/include/lab2_sync_test.c
+|4,39,1,0,1651065680,"~/2022_DKU_OS/lab2_sync/include/lab2_sync_test.c"
 -'  286  8  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
 |4,39,286,8,1651065660,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
 -'  286  8  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
@@ -106,6 +152,44 @@
 |4,39,286,8,1651065660,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
 -'  286  8  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
 |4,39,286,8,1651065660,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  286  8  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,286,8,1651065660,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  286  8  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,286,8,1651065660,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  286  8  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,286,8,1651065660,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  286  8  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,286,8,1651065660,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  286  8  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,286,8,1651065660,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  286  8  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,286,8,1651065660,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  286  8  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,286,8,1651065660,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  286  8  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,286,8,1651065660,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  286  8  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,286,8,1651065660,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  286  8  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,286,8,1651065660,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  286  8  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,286,8,1651065660,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  286  8  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,286,8,1651065660,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  286  8  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,286,8,1651065660,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  286  8  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,286,8,1651065660,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  286  8  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,286,8,1651065660,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  286  8  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,286,8,1651065660,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  200  56  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
+|4,39,200,56,1651065637,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
+-'  153  56  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
+|4,39,153,56,1651065637,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
+-'  177  56  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
+|4,39,177,56,1651065637,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
 -'  143  56  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
 |4,39,143,56,1651065637,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
 -'  143  56  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
@@ -143,7 +227,37 @@
 -'  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
 |4,39,200,2,1651065523,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
 -'  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,39,200,2,1651065403,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+|4,39,200,2,1651065523,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,200,2,1651065523,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,200,2,1651065523,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,200,2,1651065523,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,200,2,1651065523,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,200,2,1651065523,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,200,2,1651065523,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,200,2,1651065523,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,200,2,1651065523,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,200,2,1651065523,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,200,2,1651065523,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,200,2,1651065523,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,200,2,1651065523,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,200,2,1651065523,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,200,2,1651065523,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
+-'  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
+|4,39,200,2,1651065523,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
 -'  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
 |4,39,200,2,1651065403,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
 -'  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
@@ -154,122 +268,114 @@
 |4,39,200,2,1651065403,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
 -'  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
 |4,39,200,2,1651065403,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
--'  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,39,200,2,1651065403,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
--'  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,39,200,2,1651065403,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
--'  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,39,200,2,1651065403,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
--'  200  2  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,39,200,2,1651065403,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
--'  308  39  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,39,308,39,1651065162,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
--'  308  39  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,39,308,39,1651065162,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
--'  308  39  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,39,308,39,1651065162,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
--'  308  39  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,39,308,39,1651065162,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
--'  308  39  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,39,308,39,1651065162,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
--'  308  39  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,39,308,39,1651065162,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
--'  308  39  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,39,308,39,1651065162,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
--'  308  39  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,39,308,39,1651065162,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
--'  308  39  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,39,308,39,1651065162,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
--'  308  39  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,39,308,39,1651065162,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
--'  308  39  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,39,308,39,1651065162,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
--'  308  39  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,39,308,39,1651065162,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
--'  308  39  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,39,308,39,1651065162,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
--'  308  39  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,39,308,39,1651065162,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
--'  308  39  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,39,308,39,1651065162,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
--'  308  39  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,39,308,39,1651065162,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
--'  308  39  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,39,308,39,1651065162,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
--'  308  39  ~/2022_DKU_OS/lab2_sync/lab2_sync_test.c
-|4,39,308,39,1651065162,"~/2022_DKU_OS/lab2_sync/lab2_sync_test.c"
--'  204  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,204,49,1651063723,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  204  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,204,49,1651063723,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  204  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,204,49,1651063723,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  204  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,204,49,1651063723,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  204  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,204,49,1651063723,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  204  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,204,49,1651063723,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  204  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,204,49,1651063723,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  204  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,204,49,1651063723,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  204  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,204,49,1651063723,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  204  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,204,49,1651063723,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
--'  203  49  ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-|4,39,203,49,1651063691,"~/2022_DKU_OS/lab2_sync/lab2_sync.c"
 
 # History of marks within files (newest to oldest):
+
+> ~/2022_DKU_OS/lab2_sync/lab2_sync.c
+	*	1651291127	0
+	"	383	0
+	^	383	1
+	.	383	0
+	+	226	35
+	+	229	42
+	+	198	0
+	+	200	56
+	+	199	65
+	+	88	11
+	+	91	32
+	+	94	0
+	+	92	46
+	+	94	2
+	+	102	5
+	+	101	22
+	+	103	0
+	+	126	0
+	+	123	10
+	+	131	0
+	+	160	18
+	+	166	19
+	+	178	18
+	+	185	19
+	+	195	36
+	+	43	0
+	+	42	35
+	+	87	0
+	+	88	31
+	+	89	29
+	+	104	30
+	+	105	15
+	+	104	16
+	+	105	33
+	+	106	0
+	+	122	29
+	+	133	32
+	+	144	2
+	+	146	2
+	+	148	2
+	+	159	30
+	+	167	32
+	+	164	0
+	+	163	0
+	+	161	44
+	+	162	14
+	+	161	1
+	+	162	8
+	+	183	0
+	+	181	0
+	+	180	9
+	+	182	30
+	+	186	32
+	+	130	50
+	+	131	2
+	+	133	0
+	+	132	32
+	+	131	0
+	+	252	22
+	+	254	31
+	+	240	15
+	+	266	0
+	+	265	1
+	+	263	45
+	+	266	9
+	+	276	0
+	+	274	15
+	+	258	0
+	+	257	8
+	+	252	30
+	+	275	32
+	+	288	64
+	+	292	0
+	+	291	9
+	+	294	40
+	+	311	0
+	+	299	32
+	+	311	2
+	+	301	4
+	+	299	34
+	+	301	9
+	+	308	0
+	+	306	0
+	+	305	18
+	+	307	17
+	+	310	1
+	+	308	0
+	+	298	30
+	+	310	32
+	+	346	0
+	+	347	37
+	+	356	37
+	+	383	25
+	+	390	0
+	+	389	0
+	+	388	9
+	+	391	42
+	+	401	25
+	+	407	0
+	+	406	0
+	+	404	16
+	+	405	10
+	+	408	42
+	+	383	0
 
 > ~/2022_DKU_OS/lab2_sync/include/lab2_sync_types.h
 	*	1651283928	0
@@ -284,112 +390,6 @@
 	+	43	37
 	+	52	19
 	+	48	0
-
-> ~/2022_DKU_OS/lab2_sync/lab2_sync.c
-	*	1651066295	0
-	"	142	65
-	^	142	66
-	.	142	65
-	+	202	22
-	+	139	7
-	+	144	0
-	+	142	14
-	+	141	19
-	+	142	14
-	+	141	18
-	+	142	26
-	+	156	43
-	+	175	19
-	+	175	18
-	+	141	41
-	+	142	31
-	+	141	28
-	+	142	48
-	+	146	0
-	+	155	0
-	+	184	0
-	+	175	26
-	+	165	13
-	+	173	24
-	+	173	33
-	+	173	32
-	+	173	31
-	+	175	0
-	+	173	2
-	+	174	31
-	+	182	0
-	+	178	12
-	+	173	58
-	+	178	36
-	+	178	11
-	+	178	45
-	+	178	48
-	+	178	47
-	+	178	36
-	+	181	17
-	+	180	0
-	+	179	2
-	+	176	18
-	+	177	29
-	+	178	11
-	+	179	18
-	+	181	18
-	+	105	43
-	+	109	0
-	+	107	17
-	+	58	17
-	+	54	29
-	+	74	1
-	+	51	13
-	+	58	8
-	+	51	12
-	+	65	11
-	+	233	25
-	+	258	86
-	+	265	11
-	+	265	3
-	+	266	42
-	+	265	11
-	+	265	0
-	+	261	15
-	+	258	64
-	+	259	1
-	+	260	1
-	+	261	1
-	+	265	1
-	+	265	3
-	+	266	0
-	+	259	0
-	+	264	0
-	+	262	15
-	+	265	3
-	+	263	9
-	+	266	0
-	+	170	0
-	+	168	39
-	+	170	16
-	+	174	6
-	+	173	18
-	+	233	16
-	+	174	16
-	+	177	22
-	+	56	0
-	+	55	46
-	+	62	0
-	+	61	34
-	+	63	33
-	+	69	24
-	+	70	39
-	+	72	33
-	+	106	33
-	+	108	36
-	+	110	35
-	+	164	23
-	+	169	35
-	+	172	42
-	+	141	0
-	+	143	56
-	+	142	65
 
 > ~/2022_DKU_OS/lab2_sync/include/lab2_sync_test.c
 	*	1651065679	0
