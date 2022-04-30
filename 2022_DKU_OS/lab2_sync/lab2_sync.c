@@ -195,8 +195,8 @@ void init_hlist_node() {
 	pthread_mutex_init(&hlistLock, NULL);
 	int i;
 	for(i=0; i<HASH_SIZE; i++){
-		hashlist[i]->next = {NULL, NULL}; 	// point the next node inserted
-		hashlist[i]->q_loc = {NULL, NULL, 0}; 	// point the location of hashlist's   
+		hashlist[i]->next = NULL; 	// point the next node inserted
+		hashlist[i]->q_loc = NULL 	// point the location of hashlist's   
 		printf("[.] init_hlist_node() :: %d completed..\n", i);
 	}
 }
