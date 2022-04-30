@@ -50,7 +50,7 @@ typedef struct q_node {
 } queue_node;
 
 pthread_mutex_t frontLock;
-pthread_mutext_t rearLock;
+pthread_mutex_t rearLock;
 queue_node *front;	
 queue_node *rear;
 
