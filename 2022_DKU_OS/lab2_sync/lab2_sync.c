@@ -195,8 +195,11 @@ void init_hlist_node() {
 	pthread_mutex_init(&hlistLock, NULL);
 	int i;
 	for(i=0; i<HASH_SIZE; i++){
-		hashlist[i]->next = NULL; 	// point the next node inserted
-		hashlist[i]->q_loc = NULL 	// point the location of hashlist's   
+		hashlist[i]->next->next = NULL; 	// point the next node inserted
+		hashlist[i]->next->q_loc = NULL;
+		hashlist[i]->q_loc->next = NULL; 	// point the location of hashlist's   
+		hashlist[i]->q_loc->prev = NULL;
+		hashlist[i]->q_loc->data = 0;
 		printf("[.] init_hlist_node() :: %d completed..\n", i);
 	}
 }
@@ -219,23 +222,32 @@ int hash(int val) {
 void hash_queue_add(hlist_node *hashtable, int val) {
 	// You need to implement hash_queue_add function.
 	printf("[HQ] START\n");
-	queue_node* new_node;
-	new_node = (queue_node*)malloc(sizeof(queue_node));
-	new_node->data = val;
-	new_node->prev = new_node->next = NULL;
+	// make new queue_node
+	queue_node* new_Q_node;
+	new_Q_node = (queue_node*)malloc(sizeof(queue_node));
+	new_Q_node->data = val;
+	new_Q_node->prev = new_Q_node->next = NULL;
+	// make new hlist_node
+	hlist_node* new_H_node = (hlist_node*)malloc(sizeof(hlist_node));
+	new_H_node->next = NULL;
+
 	printf("[HQ] enqueue(new_node)\n");
-	enqueue(new_node);
+	enqueue(new_Q_node);
+	
 	int key = hash(val);
 	printf("[HQ] set hashtable[key].q_loc\n");
-	if(hashtable[key].q_loc == NULL){ 	// first inserted key 
+	if(hashtable[key].next == NULL){ 	// first inserted key 
+		hashtable[key].next = new_H_node;
 		hashtable[key].q_loc = rear;
+		new_H_node->q_loc = rear;
 	} else{
-		queue_node* tmp;
-		tmp = hashtable[key].q_loc;
-		while(tmp->next != NULL){
+		hlist_node* tmp;
+		tmp = hashtable[key];
+		while(tmp){
 			tmp = tmp->next;
 		}
 		tmp->next = rear;
+		new_H_node->q_loc = tmp->
 	}
 	free(new_node);
 }
