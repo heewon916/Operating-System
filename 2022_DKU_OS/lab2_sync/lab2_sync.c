@@ -548,25 +548,26 @@ void hash_queue_delete_by_target() {
 	key = hash(target);
 	tmp = hashlist[key];
 
-	if(tmp == NULL)
-		return;
-	if(tmp->q_loc->data == target){
+	if(tmp == NULL){
+	}
+	else if(tmp->q_loc->data == target){
 		n_tmp = hashlist[key]->next;
 		dequeue(tmp->q_loc);
 		free(hashlist[key]);
 		hashlist[key] = n_tmp;
-		return;
 	}
-	tmp = tmp->next;
-	while( tmp != NULL){
-		if(tmp->q_loc->data == target){
-			n_tmp = tmp->next;
-			dequeue(tmp->q_loc);
-			free(tmp);
-			tmp = n_tmp;
-			return;
-		}
+	else{
 		tmp = tmp->next;
+		while( tmp != NULL){
+			if(tmp->q_loc->data == target){
+				n_tmp = tmp->next;
+				dequeue(tmp->q_loc);
+				free(tmp);
+				tmp = n_tmp;
+				return;
+			}
+			tmp = tmp->next;
+		}
 	}
 	/*
 	queue_node* tmp = front;
@@ -595,25 +596,27 @@ void hash_queue_delete_by_target_cg() {
 	key = hash(target);
 	tmp = hashlist[key];
 
-	if(tmp == NULL)
-		return;
-	if(tmp->q_loc->data == target){
+	if(tmp == NULL){
+	}
+	else if(tmp->q_loc->data == target){
 		n_tmp = hashlist[key]->next;
 		dequeue_cg(tmp->q_loc);
 		free(hashlist[key]);
 		hashlist[key] = n_tmp;
-		return;
+		
 	}
-	tmp = tmp->next;
-	while(tmp != NULL){
-		if(tmp->q_loc->data == target){
-			n_tmp = tmp->next;
-			dequeue_cg(tmp->q_loc);
-			free(tmp);
-			tmp = n_tmp;
-			return;
-		}
+	else{
 		tmp = tmp->next;
+		while(tmp != NULL){
+			if(tmp->q_loc->data == target){
+				n_tmp = tmp->next;
+				dequeue_cg(tmp->q_loc);
+				free(tmp);
+				tmp = n_tmp;
+				break;
+			}
+			tmp = tmp->next;
+		}
 	}
 	pthread_mutex_unlock(&deleteLock);
 	/*
@@ -648,8 +651,9 @@ void hash_queue_delete_by_target_fg() {
 	tmp = hashlist[key];
 	pthread_mutex_unlock(&deleteLock);
 
-	if(tmp == NULL) return;
-	if(tmp->q_loc->data == target){
+	if(tmp == NULL) {
+	}
+	else if(tmp->q_loc->data == target){
 		pthread_mutex_lock(&deleteLock);
 		n_tmp = hashlist[key]->next;
 		pthread_mutex_unlock(&deleteLock);
@@ -660,27 +664,29 @@ void hash_queue_delete_by_target_fg() {
 		dequeue_fg(tmp->q_loc);
 		pthread_mutex_unlock(&deleteLock);
 	}
-	pthread_mutex_lock(&deleteLock);
-	tmp = tmp->next;
-	pthread_mutex_unlock(&deleteLock);
-	while(tmp != NULL){
-		if(tmp->q_loc->data == target){
-			pthread_mutex_lock(&deleteLock);
-			n_tmp = tmp->next;
-			pthread_mutex_lock(&deleteLock);
-
-			dequeue_fg(tmp->q_loc);
-			free(tmp);
-
-			pthread_mutex_lock(&deleteLock);
-			tmp = n_tmp;
-			pthread_mutex_unlock(&deleteLock);
-
-			return;
-		}
+	else{
 		pthread_mutex_lock(&deleteLock);
 		tmp = tmp->next;
 		pthread_mutex_unlock(&deleteLock);
+		while(tmp != NULL){
+			if(tmp->q_loc->data == target){
+				pthread_mutex_lock(&deleteLock);
+				n_tmp = tmp->next;
+				pthread_mutex_lock(&deleteLock);
+
+				dequeue_fg(tmp->q_loc);
+				free(tmp);
+	
+				pthread_mutex_lock(&deleteLock);
+				tmp = n_tmp;
+				pthread_mutex_unlock(&deleteLock);
+
+				break;
+			}
+			pthread_mutex_lock(&deleteLock);
+			tmp = tmp->next;
+			pthread_mutex_unlock(&deleteLock);
+		}
 	}
 	/*
 	queue_node* tmp = front;
