@@ -897,3 +897,232 @@ vi lab2_sync.c
 make clean
 make
 make 
+cd 2022_DKU_OS
+cd ..
+git add .
+git commit -m "add lock and write *_cq, *_fq"
+git push origin master
+cd 2022_DKU_OS
+cd lab2_Sync
+cd lab2_sync
+exit
+cd 2022_DKU_OS
+cd lab2_sync
+cd include
+vi lab2_sync_types.h
+exit
+cd 2022_DKU_OS
+cd lab2_sync
+make 
+make
+cd include
+vi lab2_sync_types.h
+make
+cd ..
+make
+./lab2_sync -t=4 -c=10 -l=0
+./lab2_sync -t=4 -c=10 -l=1
+git add .
+git commit -m "modify all errors: but segmentation fault errupted"
+git push origin master
+git remote add origin https://github.com/heewon916/Operating-System.git
+git config --global credential.helper cache
+git config credential.helper
+git push origin master
+git push origin
+git push origin master
+git remote -v
+git config --list
+git config credential.helper cache
+git push origin master
+git config credential.helper cache
+git push origin master
+git remote add origin https://github.com/heewon916/Operating-System.git
+cd ..
+ls
+cd .git
+ls
+vi config
+cd ..
+cd 2022_DKU_OS
+cd lab2_sync
+git add .
+git commit -m "modified: errors"
+make clean
+make
+./lab2_sync -t=4 -c=10 -l=1
+gdb ./lab2_sync
+gdb ./lab2_sync -t=4 -c=10 -l=1
+gdb -t=4 -c=10 -l=1 ./lab2_sync
+gdb --args ./lab2_sync -t=4 -c=10 -l=1
+git add .
+git commit -m "find the usage of hlist's next"
+git push origin master
+git config credential.helper cache
+git push origin master
+git config --global credential.helper cache
+git push origin master
+git config --global --unset credential.helper
+cd ..
+cd ./.git
+ls
+vi config
+cd ..
+git config --global --unset credential.helper
+cd ./.git
+vi config
+cd ..
+cd 2022_DKU_OS
+cd lab2_sync
+git add .
+git commit -m "found the usage of hlist's next pointer"
+git push origin master
+make clean
+make
+./lab2_sync -t=4 -c=10 -l=1
+cd include
+vi lab2_sync_types.h
+git add .
+git commit -m "..ing :: modify hash_queue_add() :: focusing on hlist_node"
+cd ..
+git add .
+git commit -m "..ing :: modify hash_queue_add() :: focusing on hlist_node"
+git push origin master
+cd 2022_DKU_OS
+cd lab2_sync
+vi lab2_sync.c
+cd include
+vi lab2_sync_types.h
+cd ..
+vi lab2_sync.c
+cd 2022_DKU_OS
+cd lab2_sync
+vi lab2_sync.c
+q
+exit
+cd 2022_DKU_OS
+cd lab2_sync
+./lab2_sync -t=4 -c=10 -l=1
+vi lab2_sync_test.c
+make clean
+make
+make clean
+make
+git add .
+git commit -m "modify if-else in hash_queue_add()"
+git push origin master
+./lab2_sync -t=4 -c=10 -l=1
+gdb --args ./lab2_sync -t=4 -c=10 -l=1
+make clean
+make
+./lab2_sync -t=4 -c=10 -l=1
+gdb --args ./lab2_sync -t=4 -c=10 -l=1
+cd include
+vi lab2_sync_types.h
+make clean
+make
+cd ..
+make clean
+make
+make 
+./lab2_sync -t=4 -c=10 -l=1
+gdb --args ./lab2_sync -t=4 -c=10 -l=1
+make
+./lab2_sync -t=4 -c=10 -l=1
+gdb --args ./lab2_sync -t=4 -c=10 -l=1
+make clean
+make
+./lab2_sync -t=4 -c=10 -l=1
+gdb --args ./lab2_sync -t=4 -c=10 -l=1
+git add .
+git commit -m "error not solved :: hash_queue_add() why SIGSEV is happening..."
+git push origin master
+exit
+cd 2022_DKU_OS
+cd lab2_sync
+./lab2_sync -t=4 -c=10 -l=1
+gdb --args ./lab2_sync -t=4 -c=10 -l=1
+make clean
+make
+./lab2_sync -t=4 -c=10 -l=1
+git add .
+git commit -m "solved the problem happening in init_hlist_node SIGSEV but in HQ_CQ SIGSEV happened at set q_loc"
+git push origin master
+gdb --args ./lab2_sync -t=4 -c=10 -l=1
+make clean
+make
+./lab2_sync -t=4 -c=10 -l=1
+gdb --args ./lab2_sync -t=4 -c=10 -l=1
+exit
+cd 2022_DKU_OS
+cd lab2_sync
+vi lab2_sync.c
+exit
+cd 2022_DKU_OS
+cd lab2_sync
+cd include
+vi lab2_sync_types.h
+cd ..
+vi lab2_sync_test.c
+exit
+cd 2022_DKU_OS
+cd lab2_sync
+cd include
+cd ..
+./lab2_sync -t=4 -c=10 =l=1
+ls
+./lab2_sync -t=4 -c=10 -l=1
+cd include
+vi lab2_sync_types.h
+cd ..
+make clean
+make
+./lab2_sync
+./lab2_sync -t=4 -c=10 -l=1
+vi lab2_sync_test.c
+cd ..
+cd lab2_sync
+cd include
+vi lab2_sync_types.h
+cd ..
+make clean
+make
+make clean
+make
+./lab2_sync -t=4 -c=10 -l=1
+cd include
+vi lab2_sync_types.h
+cd ..
+make clean
+make
+./lab2_sync -t=4 -c=10 -l=1
+make clean
+make
+./lab2_sync -t=2 -c=10 -l=1
+make clean
+make
+./lab2_sync -t=2 -c=3 -l=1
+make clean
+make
+./lab2_sync -t=2 -c=10 -l=1
+exit
+exot
+exit
+kill 1
+kill %1
+kill %2
+kill %3
+kill %4
+exit
+kill %5
+exit
+job
+exit
+cd 2022_DKU_OS
+cd lab2_sync
+vi lab2_sync.c
+vi lab2_sync_test.c
+vi lab2_sync.c
+cd include
+vi lab2_sync_types.h
+exit

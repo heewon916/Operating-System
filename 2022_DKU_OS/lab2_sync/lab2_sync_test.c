@@ -112,7 +112,7 @@ void* thread_job_insert_fg(void *arg) {
 
 void* thread_job_delete(void *arg) {
 	thread_arg *th_arg = (thread_arg *)arg;
-    int node_c = th_arg->node_count;
+    	int node_c = th_arg->node_count;
 	int thread_n = th_arg->thread_num;
 
 	for(int i = 0; i < node_c/thread_n; i++) {
@@ -123,7 +123,7 @@ void* thread_job_delete(void *arg) {
 
 void* thread_job_delete_cg(void *arg) {
 	thread_arg *th_arg = (thread_arg *)arg;
-    int node_c = th_arg->node_count;
+    	int node_c = th_arg->node_count;
 	int thread_n = th_arg->thread_num;
 
 	for(int i = 0; i < node_c/thread_n; i++) {
@@ -134,13 +134,13 @@ void* thread_job_delete_cg(void *arg) {
 
 void* thread_job_delete_fg(void *arg) {
 	thread_arg *th_arg = (thread_arg *)arg;
-    int node_c = th_arg->node_count;
-    int thread_n = th_arg->thread_num;
+   	int node_c = th_arg->node_count;
+    	int thread_n = th_arg->thread_num;
 
-    for(int i = 0; i < node_c/thread_n; i++) {
-        target = rand() % node_c;
-        hash_queue_delete_by_target_fg();
-    }
+	for(int i = 0; i < node_c/thread_n; i++) {
+        	target = rand() % node_c;
+        	hash_queue_delete_by_target_fg();
+	}
 }
 
 void hq_test(int num_threads, int node_count, int lock_type) {
@@ -213,6 +213,7 @@ void hq_test(int num_threads, int node_count, int lock_type) {
 		init_queue();
 		
 		gettimeofday(&tv_insert_s, NULL);
+		printf("create part");
 		for(int i = 0; i < num_t; i++) {
 			th_arg->node_count = node_c;
 			th_arg->thread_num = num_t;
@@ -225,6 +226,7 @@ void hq_test(int num_threads, int node_count, int lock_type) {
 		gettimeofday(&tv_insert_e, NULL);
 
 		gettimeofday(&tv_delete_s, NULL);
+		printf("delete_part");
 		for(int i = 0; i < num_t; i++) {
 			th_arg->node_count = node_c;
 			th_arg->thread_num = num_t;

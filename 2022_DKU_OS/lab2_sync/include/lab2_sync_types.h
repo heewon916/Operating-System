@@ -49,8 +49,8 @@ typedef struct q_node {
 	int data;
 } queue_node;
 
-pthread_mutex_t frontLock;
-pthread_mutex_t rearLock;
+//pthread_mutex_t frontLock;
+//pthread_mutex_t rearLock;
 queue_node *front;	
 queue_node *rear;
 
@@ -61,6 +61,11 @@ typedef struct hash_list {
 
 pthread_mutex_t hlistLock;
 hlist_node *hashlist[HASH_SIZE];
+
+pthread_mutex_t enqueueLock;
+pthread_mutex_t dequeueLock;
+pthread_mutex_t insertLock;
+pthread_mutex_t deleteLock;
 
 /* Lab2 Hash and Queue init functions */
 void init_queue();
@@ -73,21 +78,21 @@ int value_exist(int val);
 /* Lab2 Hash Queue functions for single-thread */
 void enqueue(queue_node *new_node);
 void dequeue(queue_node *del_node);
-void hash_queue_add(hlist_node *hashtable, int val);
+void hash_queue_add(hlist_node **hashtable, int val);
 void hash_queue_insert_by_target();
 void hash_queue_delete_by_target();
 
 /* Lab2 Hash Queue functions for Coarse-grained */
 void enqueue_cg(queue_node *new_node);
 void dequeue_cg(queue_node *del_node);
-void hash_queue_add_cg(hlist_node *hashtable, int val);
+void hash_queue_add_cg(hlist_node **hashtable, int val);
 void hash_queue_insert_by_target_cg();
 void hash_queue_delete_by_target_cg();
 
 /* Lab2 Hash Queue functions for fine-grained */
 void enqueue_fg(queue_node *new_node);
 void dequeue_fg(queue_node *del_node);
-void hash_queue_add_fg(hlist_node *hashtable, int val);
+void hash_queue_add_fg(hlist_node **hashtable, int val);
 void hash_queue_insert_by_target_fg();
 void hash_queue_delete_by_target_fg();
 
