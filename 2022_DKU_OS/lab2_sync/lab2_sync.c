@@ -299,7 +299,7 @@ void dequeue_fg(queue_node *del_node) {
  */
 void init_hlist_node() {
 	// You need to implement init_hlist_node function.
-	printf("init_hlist_node()");
+	//printf("init_hlist_node()");
 	//pthread_mutex_init(&hlistLock, NULL);
 	int i;
 	for(i=0; i<HASH_SIZE; i++){
