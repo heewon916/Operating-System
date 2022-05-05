@@ -158,18 +158,18 @@ void hq_test(int num_threads, int node_count, int lock_type) {
 	/*
 	 *  Multi Thread Insert and Delete Test No-lock
 	 */
-	printf("[MAIN] hq_test::\n");
+	//printf("[MAIN] hq_test::\n");
 	if (lock_type == 0) {
 		gettimeofday(&tv_total_s, NULL);
 		printf("\n");
 		
-		printf("[MAIN] \tinit_hlist_node()\n");
+		//printf("[MAIN] \tinit_hlist_node()\n");
 		init_hlist_node();
-		printf("[MAIN] \tinit_queue()\n");
+		//printf("[MAIN] \tinit_queue()\n");
 		init_queue();
 		
 		gettimeofday(&tv_insert_s, NULL);
-		printf("[MAIN] \tcreate thread_job_insert\n");
+		//printf("[MAIN] \tcreate thread_job_insert\n");
 		for(int i = 0; i < num_t; i++) {
 			th_arg->node_count = node_c;
 			th_arg->thread_num = num_t;
@@ -183,7 +183,7 @@ void hq_test(int num_threads, int node_count, int lock_type) {
 
 		gettimeofday(&tv_delete_s, NULL);
 	
-		printf("[MAIN] \tcreate thread_job_delete\n");
+		//printf("[MAIN] \tcreate thread_job_delete\n");
 		for(int i = 0; i < num_t; i++) {
 			th_arg->node_count = node_c;
 			th_arg->thread_num = num_t;
@@ -212,10 +212,10 @@ void hq_test(int num_threads, int node_count, int lock_type) {
 	
 		init_hlist_node();
 		init_queue();
-		printf("init_hlist_node(), init_queue()\n");
+		//printf("init_hlist_node(), init_queue()\n");
 
 		gettimeofday(&tv_insert_s, NULL);
-		printf("create part\n");
+		//printf("create part\n");
 		for(int i = 0; i < num_t; i++) {
 			th_arg->node_count = node_c;
 			th_arg->thread_num = num_t;
@@ -228,7 +228,7 @@ void hq_test(int num_threads, int node_count, int lock_type) {
 		gettimeofday(&tv_insert_e, NULL);
 
 		gettimeofday(&tv_delete_s, NULL);
-		printf("delete_part\n");
+		//printf("delete_part\n");
 		for(int i = 0; i < num_t; i++) {
 			th_arg->node_count = node_c;
 			th_arg->thread_num = num_t;
@@ -309,7 +309,7 @@ int main(int argc, char *argv[]) {
 		} else goto INVALID_ARGS;
 	}
 	if((num_threads > 0) && (node_count > 0)) {
-		printf("[.] MAIN :: hq_test START\n");
+		//printf("[.] MAIN :: hq_test START\n");
 		hq_test(num_threads, node_count, lock_type);
 	} else goto INVALID_ARGS;
 	

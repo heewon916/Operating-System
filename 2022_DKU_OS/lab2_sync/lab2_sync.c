@@ -334,7 +334,7 @@ int hash(int val) {
  */
 void hash_queue_add(hlist_node **hashtable, int val) {
 	// You need to implement hash_queue_add function.
-	printf("[HQ_add] START\n");
+	//printf("[HQ_add] START\n");
 	// make new queue_node
 	queue_node* new_Q_node;
 	//new_Q_node = (queue_node*)malloc(sizeof(queue_node));
