@@ -73,6 +73,7 @@ void enqueue(queue_node *new_node) {
 		front = new_node;
 		//printf("[E] rear = new_node\n");
 		rear = new_node;
+		printf("rear->data = front->data = %d\n", rear->data);
 		//first = 0;
 		
 	} else {		// if queue was not empty
@@ -107,13 +108,15 @@ void enqueue_cg(queue_node *new_node) {
 	if(front == rear){
 		front = new_node;
 		rear = new_node;
+		//printf("rear->data = front->data = %d, %d\n", rear->data, front->data);
 		//first = 0;
 	} else{
 		rear->next = new_node;
 		new_node->prev = rear;
-		//rear = new_node;
+		//printf("rear->data = %d, rear->prev->data = %d\n", rear->data, rear->prev->data);
+		rear = new_node;
 	}
-	rear = new_node;
+	//rear = new_node;
 	pthread_mutex_unlock(&enqueueLock);
 	//pthread_mutex_unlock(&rearLock);
 	//pthread_mutex_unlock(&frontLock);
@@ -158,9 +161,9 @@ void enqueue_fg(queue_node *new_node) {
 		//rear = new_node;
 		//pthread_mutex_unlock(&enqueueLock);
 	}
-	pthread_mutex_lock(&enqueueLock);
-	rear = new_node;
-	pthread_mutex_unlock(&enqueueLock);
+	//pthread_mutex_lock(&enqueueLock);
+	//rear = new_node;
+	//pthread_mutex_unlock(&enqueueLock);
 	//pthread_mutex_unlock(&rearLock)
 	//pthread_mutex_unlock(&frontLock);
 }
@@ -245,31 +248,34 @@ void dequeue_cg(queue_node *del_node) {
 void dequeue_fg(queue_node *del_node) {
 	// You need to implement dequeue_fg function.
 	if(front == rear){
+		return;
 	}
 	else if(del_node->prev == NULL){
 		pthread_mutex_lock(&dequeueLock);
 		front = del_node->next;
-		pthread_mutex_unlock(&dequeueLock);
+		//pthread_mutex_unlock(&dequeueLock);
 
-		pthread_mutex_lock(&dequeueLock);
+		//if(del_node->next != NULL){
+		//pthread_mutex_lock(&dequeueLock);
 		del_node->next->prev = NULL;
 		pthread_mutex_unlock(&dequeueLock);
+		//}
 	}
 	else if(del_node->next == NULL){
 		pthread_mutex_lock(&dequeueLock);
 		rear = del_node->prev;
-		pthread_mutex_unlock(&dequeueLock);
+		//pthread_mutex_unlock(&dequeueLock);
 
-		pthread_mutex_lock(&dequeueLock);
+		//pthread_mutex_lock(&dequeueLock);
 		del_node->prev->next = NULL;
 		pthread_mutex_unlock(&dequeueLock);
 	}
 	else{
 		pthread_mutex_lock(&dequeueLock);
 		del_node->next->prev = del_node->prev;
-		pthread_mutex_unlock(&dequeueLock);
+		//pthread_mutex_unlock(&dequeueLock);
 
-		pthread_mutex_lock(&dequeueLock);
+		//pthread_mutex_lock(&dequeueLock);
 		del_node->prev->next = del_node->next;
 		pthread_mutex_unlock(&dequeueLock);
 	}

@@ -92,9 +92,10 @@ void* thread_job_insert_cg(void *arg) {
 	thread_arg *th_arg = (thread_arg *)arg;
 	int node_c = th_arg->node_count;
 	int thread_n = th_arg->thread_num;
-
+	
 	for(int i = 0; i < node_c/thread_n; i++) {
 		target = rand() % node_c;
+		//printf("target = %d\n", target);
 		hash_queue_insert_by_target_cg();
 	}
 }
@@ -208,12 +209,13 @@ void hq_test(int num_threads, int node_count, int lock_type) {
 	if (lock_type == 1) {
 		gettimeofday(&tv_total_s, NULL);
 		printf("\n");
-
+	
 		init_hlist_node();
 		init_queue();
-		
+		printf("init_hlist_node(), init_queue()\n");
+
 		gettimeofday(&tv_insert_s, NULL);
-		printf("create part");
+		printf("create part\n");
 		for(int i = 0; i < num_t; i++) {
 			th_arg->node_count = node_c;
 			th_arg->thread_num = num_t;
@@ -226,7 +228,7 @@ void hq_test(int num_threads, int node_count, int lock_type) {
 		gettimeofday(&tv_insert_e, NULL);
 
 		gettimeofday(&tv_delete_s, NULL);
-		printf("delete_part");
+		printf("delete_part\n");
 		for(int i = 0; i < num_t; i++) {
 			th_arg->node_count = node_c;
 			th_arg->thread_num = num_t;
